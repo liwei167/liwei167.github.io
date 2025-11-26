@@ -1,0 +1,254 @@
+body {
+    background-color: #e6f2ff; /* 保留浅蓝色背景 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 实验9现代字体，更适配网页 */
+    font-size: 16px; /* 统一字体大小 */
+    line-height: 1.6; /* 保留易读行高 */
+    color: #333; /* 统一文本颜色 */
+    margin: 0; /* 清除默认边距，避免布局错乱 */
+    padding-top: 50px; /* 为固定导航栏预留顶部空间（实验10必需） */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #003366;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #0055aa;
+    text-align: center;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #003366;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* 3. 盒模型基础样式（实验8核心，保留并优化） */
+.container {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-container {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #0055aa;
+    background-color: #f0f8ff;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+/* 4. 表格样式（整合实验8/9，更立体） */
+table {
+    width: 100%; /* 表格占满容器 */
+    border-collapse: collapse; /* 合并边框，避免双线 */
+    box-shadow: 0 2px 5px #ddd; /* 实验8阴影，保留立体效果 */
+}
+
+th, td {
+    border: 1px solid #aaa; /* 实验8深灰边框 */
+    padding: 12px; /* 实验8更大内边距 */
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    color: #444;
+}
+
+/* 5. 段落与链接样式（实验9核心，保留） */
+p {
+    margin-bottom: 15px;
+    padding: 0 10px; /* 避免文本贴边 */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #004080; /*  hover加深颜色，更明显 */
+}
+
+/* 6. 表单样式（合并重复项，实验9/8整合） */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    color: #003366;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #999;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/* Smooth color transition for buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* display属性相关 */
+nav a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #004080;
+}
+
+.hide-with-visibility {
+    visibility: hidden;
+}
+
+.hide-with-display {
+    display: none;
+}
+
+/* position属性相关 */
+
+.relative-box {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: #ffebcc;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 450px;
+    height: 120px;
+    margin: 20px 0;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 180px;
+    background-color: #ffe0e0;
+    padding: 10px;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* float布局相关 */
+.float-left {
+    float: left;
+    margin: 10px;
+    width: 150px;
+    height: auto;
+}
+
+/* 清除浮动（实验报告要求保留） */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Basic transform on hover */
+.transform-hover {
+    transition: transform 0.3s ease;
+}
+
+.transform-hover:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Rotate image on hover */
+.rotate-image {
+    transition: transform 0.4s ease;
+}
+
+.rotate-image:hover {
+    transform: rotate(10deg);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply animation to element */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Card with hover effect */
+.card {
+    width: 250px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+.card:hover {
+    transform: rotate(-2deg) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
