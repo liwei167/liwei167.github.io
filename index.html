@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia Example</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            font-family: "微软雅黑", Arial, sans-serif; /* 字体 */
+            background-color: #f9f9f9; /* 浅灰色背景 */
+            color: #333; /* 深灰色文字 */
+            margin: 0; /* 清除默认边距 */
+            padding: 20px; /* 内边距，让内容不贴边 */
+        }
+        /* 给h1、h2标题统一设置颜色 */
+        h1, h2 {
+            color: #004080; /* 深蓝色 */
+            border-bottom: 2px solid #eee; /* 底部加浅灰色横线 */
+            padding-bottom: 10px;
+        }
+        /* 给表格设置样式 */
+        table {
+            border-collapse: collapse; /* 合并边框 */
+            width: 100%; /* 占满页面宽度 */
+            margin: 20px 0; /* 上下留20px间距 */
+        }
+        th, td {
+            border: 1px solid #ccc; /* 灰色边框 */
+            padding: 10px; /* 单元格内边距 */
+            text-align: center; /* 文字居中 */
+        }
+        th {
+            background-color: #e6f2ff; /* 表头浅蓝色背景 */
+        }
+        /* 给链接设置样式 */
+        a {
+            color: #004080; /* 链接蓝色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+        a:hover {
+            text-decoration: underline; /* 鼠标悬浮时显示下划线 */
+            color: #0066cc; /* 悬浮时颜色变深 */
+        }
+    </style>
+    <!-- 内部样式表结束 -->
+</head>
+
+<body>
+<header>
+    <div class="fixed-nav">
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About Us</a> |
+            <a href="multimedia.html">Multimedia</a>
+        </nav>
+    </div>
+    <h1>Welcome to Our Campus</h1>
+</header>
+
+
+
+<main>
+    <section>
+        <h2>Campus Logo</h2>
+        <p>Here is our campus logo:</p>
+        <img src="images/OIP-C.png" alt="Campus Logo" width="200" height="200">
+    </section>
+
+    <section class="clearfix">
+        <h2>Campus Scenery</h2>
+        <p>
+            This is our campus scenery:
+        </p>
+        <img src="images/CampusScenery.jpg" alt="Campus" class="float-left" width="200" height="200">
+    </section>
+
+    <section>
+        <h2 >School Anthem</h2>
+        <p>Listen to our school anthem:</p>
+        <audio controls>
+            <source src="videos/school_anthem.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2 >Campus Tour</h2>
+        <p>Watch a tour of our beautiful campus:</p>
+        <video width="600" height="400" controls>
+            <source src="https://www.nuist.edu.cn/__local/7/72/F3/ED96FC1CFE3AAB0DBEBE27C4A06_D874DD9C_A518094.mp4?e=.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>This semester's curriculum</h2>
+            <div class="table-container">
+                <table>
+                    <td>Data Structures and Algorithms</td>
+                    <td>Prof. Li</td>
+                    <td>Monday 8:00 - 9:40</td>
+                    <td>Building A, Room 201</td>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative-box">
+        This box is positioned relatively.
+        <div class="absolute-box">This box is positioned absolutely.</div>
+    </div>
+
+    <div class="container">
+        <h2>User Submit</h2>
+        <form>
+            <label for="username">username：</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">email：</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">password：</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="major">major：</label>
+            <select id="major" name="major">
+                <option value="computer">computer</option>
+                <option value="math">math</option>
+            </select>
+
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+
+
+   <p class="hide-with-visibility">This paragraph is hidden but space is reserved.</p>
+   <p class="hide-with-display">This paragraph is completely hidden.</p>
+
+
+    <section>
+
+        <img src="images/OIP-C.png" alt="Campus" class="rotate-image float-left">
+        <a href="multimedia.html">
+        <button class="transform-hover">Hover Me</button>
+        </a>
+    </section>
+
+</main>
+<footer>
+    <p>&copy; 2025 Campus Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
